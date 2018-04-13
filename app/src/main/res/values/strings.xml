@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FHApp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- 底部导航 -->
+    <string name="tab_menu_home">首页</string>
+    <string name="tab_menu_put">投注</string>
+    <string name="tab_menu_find">发现</string>
+    <string name="tab_menu_mine">我的</string>
+
+
+    <!---->
+    <string name="mine_balance">余额(元):</string>
+    <string name="money">10000.10</string>
+    <string name="recharge">充值</string>
+    <string name="withdraw">提现</string>
+    <string name="username">请输入手机/邮箱/用户名</string>
+    <string name="password">请输入密码</string>
+    <string name="login_button">登录</string>
+    <string name="forget_passwd">忘记密码?</string>
+    <string name="register">注&#160;&#160;&#160;册</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mine_logout">退出登录</string>
+    <string name="mine_bank_card">银行卡</string>
+    <string name="put_recodes">投注记录</string>
+    <string name="mine_recommend">我的推荐</string>
+    <string name="account_message">账号明细</string>
+    <string name="mine_setting">个人设置</string>
+    <string name="help_center">帮助中心</string>
+
+</resources>

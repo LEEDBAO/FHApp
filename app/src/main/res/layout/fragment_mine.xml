@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context=".mvp.ui.fragment.MineFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBelowBG">
+
+            <RelativeLayout
+                android:id="@+id/mine_blance_message_RT"
+                android:layout_width="match_parent"
+                android:layout_height="320px"
+                android:background="@mipmap/myban">
+
+                <TextView
+                    android:id="@+id/mine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="54px"
+                    android:layout_marginTop="56px"
+                    android:text="@string/title_activity_main"
+                    android:textColor="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/mine_logo_my"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="44px"
+                    android:layout_marginTop="33px"
+                    android:background="@mipmap/my" />
+
+                <ImageButton
+                    android:id="@+id/image_button_chat"
+                    android:layout_width="68px"
+                    android:layout_height="68px"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="188px"
+                    android:layout_marginTop="49px"
+                    android:background="@mipmap/myxx" />
+
+                <ImageView
+                    android:id="@+id/money"
+                    android:layout_width="78px"
+                    android:layout_height="68px"
+                    android:layout_alignLeft="@id/mine_name"
+                    android:layout_below="@id/mine_name"
+                    android:layout_marginTop="115px"
+                    android:background="@mipmap/myye" />
+
+                <TextView
+                    android:id="@+id/mine_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/money"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="10px"
+                    android:layout_toEndOf="@+id/money"
+                    android:layout_toRightOf="@+id/money"
+                    android:text="@string/mine_balance"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/mine_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/money"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="-10px"
+                    android:layout_toEndOf="@+id/mine_balance"
+                    android:layout_toRightOf="@+id/mine_balance"
+                    android:text="@string/money"
+                    android:textColor="@color/white"
+                    android:textSize="74px" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_group_ll"
+                android:layout_width="match_parent"
+                android:layout_height="165px"
+                android:layout_below="@+id/mine_blance_message_RT"
+                android:divider="@drawable/divider_color"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <com.example.ruby.fhapp.app.utils.DrawableCenterTextView
+                    android:id="@+id/recharge_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ll_customer_selector"
+                    android:button="@null"
+                    android:drawableLeft="@mipmap/mytk"
+                    android:drawablePadding="43px"
+                    android:gravity="center_vertical"
+                    android:text="@string/recharge"
+                    android:clickable="true"
+                    android:textColor="@color/black" />
+
+
+                <com.example.ruby.fhapp.app.utils.DrawableCenterTextView
+                    android:id="@+id/withdraw_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ll_customer_selector"
+                    android:button="@null"
+                    android:drawableLeft="@mipmap/mycz"
+                    android:drawablePadding="43px"
+                    android:gravity="center_vertical"
+                    android:text="@string/withdraw"
+                    android:clickable="true"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_bankcard_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:layout_below="@id/mine_group_ll"
+                android:layout_marginTop="15px"
+                android:clickable="true"
+                android:background="@drawable/ll_customer_selector"
+                >
+
+                <ImageView
+                    android:id="@+id/mine_imageView"
+                    android:layout_width="125px"
+                    android:layout_height="125px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:background="@mipmap/mycard" />
+
+                <TextView
+                    android:id="@+id/mine_text_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="195px"
+                    android:text="@string/mine_bank_card"
+                    android:textColor="@color/black"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="44px"
+                    android:background="@mipmap/myjt" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_putrecode_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:clickable="true"
+                android:layout_below="@+id/mine_bankcard_RT"
+                android:background="@drawable/ll_customer_selector"
+                >
+
+                <ImageView
+                    android:layout_width="125px"
+                    android:layout_height="125px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:background="@mipmap/mytouzh" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="195px"
+                    android:text="@string/put_recodes"
+                    android:textColor="@color/black"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="44px"
+                    android:background="@mipmap/myjt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="195px"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_recommended_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:clickable="true"
+                android:layout_below="@+id/mine_putrecode_RT"
+                android:background="@drawable/ll_customer_selector"
+                >
+
+                <ImageView
+                    android:layout_width="125px"
+                    android:layout_height="125px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:background="@mipmap/myij" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="195px"
+                    android:text="@string/mine_recommend"
+                    android:textColor="@color/black"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="44px"
+                    android:background="@mipmap/myjt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="195px"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_account_balance_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:clickable="true"
+                android:background="@drawable/ll_customer_selector"
+                android:layout_below="@+id/mine_recommended_RT"
+                >
+
+                <ImageView
+                    android:layout_width="125px"
+                    android:layout_height="125px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:background="@mipmap/mymx" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="195px"
+                    android:text="@string/account_message"
+                    android:textColor="@color/black"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="44px"
+                    android:background="@mipmap/myjt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="195px"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_setting_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:clickable="true"
+                android:layout_below="@+id/mine_account_balance_RT"
+                android:background="@drawable/ll_customer_selector"
+                >
+
+                <ImageView
+                    android:layout_width="125px"
+                    android:layout_height="125px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:background="@mipmap/mysz" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="195px"
+                    android:text="@string/mine_setting"
+                    android:textColor="@color/black"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="44px"
+                    android:background="@mipmap/myjt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="195px"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_help_center_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:clickable="true"
+                android:layout_below="@+id/mine_setting_RT"
+                android:background="@drawable/ll_customer_selector"
+                >
+
+                <ImageView
+                    android:layout_width="125px"
+                    android:layout_height="125px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:background="@mipmap/myhelp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="195px"
+                    android:text="@string/help_center"
+                    android:textColor="@color/black"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70px"
+                    android:layout_height="100px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="44px"
+                    android:background="@mipmap/myjt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="195px"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_logout_RT"
+                android:layout_width="match_parent"
+                android:layout_height="143px"
+                android:layout_below="@id/mine_help_center_RT"
+                android:layout_marginBottom="50px"
+                android:layout_marginTop="50px"
+                android:clickable="true"
+                android:background="@drawable/ll_customer_selector"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/mine_logout"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </ScrollView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

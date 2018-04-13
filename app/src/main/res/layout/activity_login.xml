@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/imageView"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="33px"
+        android:background="@mipmap/close" />
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="440px"
+        android:layout_height="190px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="158px"
+        app:srcCompat="@mipmap/logo2" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="535px"
+        >
+        <ImageView
+            android:id="@+id/image_person"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/user_on" />
+        <EditText
+            android:id="@+id/text_username"
+            android:layout_width="833px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/username"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="714px"
+        >
+        <ImageView
+            android:id="@+id/image_passwd"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/pass_on" />
+
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="833px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="900px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1100px"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/login"
+        android:textSize="56px"
+        android:textColor="@color/white"
+        android:text="@string/login_button" />
+
+    <Button
+        android:id="@+id/forget_passwd_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginBottom="36dp"
+        android:layout_marginRight="61px"
+        android:background="@color/transparent"
+        android:text="@string/forget_passwd"
+        android:layout_alignLeft="@+id/imageView" />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="61px"
+        android:text="@string/register"
+        android:background="@color/transparent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

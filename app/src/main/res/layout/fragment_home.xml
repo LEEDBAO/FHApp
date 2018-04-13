@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/navigation_header_container"
+        layout="@layout/head_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_header_container">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="447px" />
+
+            <com.sunfusheng.marqueeview.MarqueeView
+                android:id="@+id/marqueeView"
+                android:layout_width="match_parent"
+                android:layout_height="71px"
+                android:background="@color/colorBelowBG"
+                app:mvAnimDuration="1000"
+                app:mvDirection="right_to_left"
+                app:mvSingleLine="true"
+                app:mvTextColor="@color/black"
+                app:mvTextSize="31px" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:background="@color/colorMaster">
+
+                <RadioGroup
+                    android:id="@+id/rg_tab_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        style="@style/tab_menu_item"
+                        android:drawableTop="@mipmap/zhif"
+                        android:text="@string/tab_menu_home"
+                        android:textSize="32px" />
+
+                    <RadioButton
+                        style="@style/tab_menu_item"
+                        android:drawableTop="@drawable/tab_menu_put"
+                        android:text="@string/tab_menu_put"
+                        android:textSize="32px" />
+
+                    <RadioButton
+                        style="@style/tab_menu_item"
+                        android:drawableTop="@drawable/tab_menu_find"
+                        android:text="@string/tab_menu_find"
+                        android:textSize="32px" />
+
+                    <RadioButton
+                        style="@style/tab_menu_item"
+                        android:drawableTop="@drawable/tab_menu_mine"
+                        android:text="@string/tab_menu_mine"
+                        android:textSize="32px" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/home_title_my_game"
+                layout="@layout/red_title_na_layout" />
+
+            <com.example.library.AutoFlowLayout
+                android:id="@+id/home_my_game"
+                android:layout_width="match_parent"
+                android:layout_height="80px" />
+
+            <include
+                android:id="@+id/home_title_hot_lottery"
+                layout="@layout/red_title_na_layout" />
+
+            <com.example.library.AutoFlowLayout
+                android:id="@+id/home_hot_lottery"
+                android:layout_width="match_parent"
+                android:layout_height="80px" />
+
+            <include
+                android:id="@+id/home_title_other_recommend"
+                layout="@layout/red_title_na_layout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="600px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                </LinearLayout>
+
+               <view
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:background="@color/lightgrey"
+                   />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

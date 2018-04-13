@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/colorMaster">
+
+        <RadioGroup
+            android:id="@+id/rg_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBelowBG"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/show_end_home"
+                style="@style/tab_menu_item"
+                android:drawableTop="@drawable/tab_menu_home"
+                android:text="@string/tab_menu_home"
+                android:textSize="32px" />
+
+            <RadioButton
+                android:id="@+id/show_end_put"
+                style="@style/tab_menu_item"
+                android:drawableTop="@drawable/tab_menu_put"
+                android:text="@string/tab_menu_put"
+                android:textSize="32px" />
+
+            <RadioButton
+                android:id="@+id/show_end_find"
+                style="@style/tab_menu_item"
+                android:drawableTop="@drawable/tab_menu_find"
+                android:text="@string/tab_menu_find"
+                android:textSize="32px" />
+
+            <RadioButton
+                android:id="@+id/show_end_mine"
+                style="@style/tab_menu_item"
+                android:drawableTop="@drawable/tab_menu_mine"
+                android:text="@string/tab_menu_mine"
+                android:textSize="32px" />
+        </RadioGroup>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>
