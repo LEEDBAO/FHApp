@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+        <tab
+            inActiveColor="@color/colorNvBG"
+            activeColor="@color/colorMaster"
+            id="@+id/tab_end_home"
+            icon="@drawable/ic_home_black_24dp"
+            title="@string/tab_menu_home" />
+        <tab
+            inActiveColor="@color/colorNvBG"
+            activeColor="@color/colorMaster"
+            id="@+id/tab_end_put"
+            icon="@drawable/ic_put_black_24dp"
+            title="@string/tab_menu_put" />
+
+        <tab
+            inActiveColor="@color/colorNvBG"
+            activeColor="@color/colorMaster"
+            id="@+id/tab_end_find"
+            icon="@drawable/ic_find_black_24dp"
+            title="@string/tab_menu_find" />
+        <tab
+                inActiveColor="@color/colorNvBG"
+                activeColor="@color/colorMaster"
+                id="@+id/tab_end_mine"
+                icon="@drawable/ic_mine_black_24dp"
+                title="@string/tab_menu_mine" />
+        <!--<tab-->
+            <!--id="+id/tab_end_mine"-->
+            <!--icon="@drawable/ic_mine_black_24dp"-->
+            <!--inActiveColor="@color/colorNvBG"-->
+        <!--activeColor="@color/colorMaster"-->
+
+        <!--title="@string/tab_menu_mine" />-->
+</tabs>

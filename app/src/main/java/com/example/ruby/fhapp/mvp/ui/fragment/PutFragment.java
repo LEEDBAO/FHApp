@@ -9,82 +9,39 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.example.ruby.fhapp.AppFragment;
 import com.example.ruby.fhapp.R;
-import com.example.ruby.fhapp.di.component.DaggerMineComponent;
-import com.example.ruby.fhapp.di.module.MineModule;
-import com.example.ruby.fhapp.mvp.contract.MineContract;
-import com.example.ruby.fhapp.mvp.presenter.MinePresenter;
+import com.example.ruby.fhapp.di.component.DaggerPutComponent;
+import com.example.ruby.fhapp.di.module.PutModule;
+import com.example.ruby.fhapp.mvp.contract.PutContract;
+import com.example.ruby.fhapp.mvp.presenter.PutPresenter;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
 
-public class MineFragment extends AppFragment<MinePresenter> implements MineContract.View {
+public class PutFragment extends AppFragment<PutPresenter> implements PutContract.View {
 
-    @BindView(R.id.mine_name)
-    TextView mineName;
-    @BindView(R.id.mine_logo_my)
-    ImageButton mineLogoMy;
-    @BindView(R.id.image_button_chat)
-    ImageButton imageButtonChat;
-    @BindView(R.id.money)
-    ImageView money;
-    @BindView(R.id.mine_balance)
-    TextView mineBalance;
-    @BindView(R.id.mine_money)
-    TextView mineMoney;
-    @BindView(R.id.mine_blance_message_RT)
-    RelativeLayout mineBlanceMessageRT;
-    @BindView(R.id.mine_imageView)
-    ImageView mineImageView;
-    @BindView(R.id.mine_text_message)
-    TextView mineTextMessage;
-    @BindView(R.id.mine_bankcard_RT)
-    RelativeLayout mineBankcardRT;
-    @BindView(R.id.mine_putrecode_RT)
-    RelativeLayout minePutrecodeRT;
-    @BindView(R.id.mine_recommended_RT)
-    RelativeLayout mineRecommendedRT;
-    @BindView(R.id.mine_account_balance_RT)
-    RelativeLayout mineAccountBalanceRT;
-    @BindView(R.id.mine_setting_RT)
-    RelativeLayout mineSettingRT;
-    @BindView(R.id.mine_help_center_RT)
-    RelativeLayout mineHelpCenterRT;
-    @BindView(R.id.mine_logout_RT)
-    RelativeLayout mineLogoutRT;
-    Unbinder unbinder;
-
-    public static MineFragment newInstance() {
-        MineFragment fragment = new MineFragment();
+    public static PutFragment newInstance() {
+        PutFragment fragment = new PutFragment();
         return fragment;
     }
 
     @Override
     public void setupFragmentComponent(@NonNull AppComponent appComponent) {
-        DaggerMineComponent //如找不到该类,请编译一下项目
+        DaggerPutComponent //如找不到该类,请编译一下项目
                 .builder()
                 .appComponent(appComponent)
-                .mineModule(new MineModule(this))
+                .putModule(new PutModule(this))
                 .build()
                 .inject(this);
     }
 
     @Override
     public View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mine, container, false);
+        return inflater.inflate(R.layout.fragment_put, container, false);
     }
 
     @Override
@@ -158,43 +115,5 @@ public class MineFragment extends AppFragment<MinePresenter> implements MineCont
     @Override
     public void killMyself() {
 
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        unbinder = ButterKnife.bind(this, rootView);
-        return rootView;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
-
-    @OnClick({R.id.mine_logo_my, R.id.image_button_chat, R.id.mine_bankcard_RT, R.id.mine_putrecode_RT, R.id.mine_recommended_RT, R.id.mine_account_balance_RT, R.id.mine_setting_RT, R.id.mine_help_center_RT, R.id.mine_logout_RT})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.mine_logo_my:
-                break;
-            case R.id.image_button_chat:
-                break;
-            case R.id.mine_bankcard_RT:
-                break;
-            case R.id.mine_putrecode_RT:
-                break;
-            case R.id.mine_recommended_RT:
-                break;
-            case R.id.mine_account_balance_RT:
-                break;
-            case R.id.mine_setting_RT:
-                break;
-            case R.id.mine_help_center_RT:
-                break;
-            case R.id.mine_logout_RT:
-                break;
-        }
     }
 }

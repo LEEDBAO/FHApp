@@ -17,24 +17,20 @@ package com.example.ruby.fhapp.app;
 
 import android.app.Application;
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
+import com.example.ruby.fhapp.mvp.model.api.Api;
 import com.jess.arms.base.delegate.AppLifecycles;
 import com.jess.arms.di.module.GlobalConfigModule;
-//import com.jess.arms.http.log.RequestInterceptor;
 import com.jess.arms.integration.ConfigModule;
-import com.jess.arms.utils.ArmsUtils;
-//import com.squareup.leakcanary.RefWatcher;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
+//import com.jess.arms.http.log.RequestInterceptor;
+//import com.squareup.leakcanary.RefWatcher;
 //import me.jessyan.mvparms.demo.BuildConfig;
 //import me.jessyan.progressmanager.ProgressManager;
 //import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
-import com.example.ruby.fhapp.mvp.model.api.Api;
 
 /**
  * ================================================
@@ -52,15 +48,11 @@ import com.example.ruby.fhapp.mvp.model.api.Api;
 public class GlobalConfiguration implements ConfigModule {
     @Override
     public void applyOptions(Context context, GlobalConfigModule.Builder builder) {
-        //使用builder可以为框架配置一些配置信息
-//        builder.baseurl(Api.APP_DOMAIN);
-//        builder.baseurl(Api.APP_DOMAIN)
-//                .cacheFile(New File("cache"));
+        builder.baseurl(Api.APP_DOMAIN);
     }
 
     @Override
     public void injectAppLifecycle(Context context, List<AppLifecycles> lifecycles) {
-        //向Application的生命周期中注入一些自定义逻辑
     }
 
     @Override

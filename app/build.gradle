@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
 
+
 android {
+    compileOptions  {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     useLibrary 'org.apache.http.legacy'
@@ -18,10 +23,6 @@ android {
         }
     }
 
-    compileOptions {//就算您使用 AndroidStuido v3.0, 也需要配置以下参数
-        targetCompatibility JavaVersion.VERSION_1_8
-        sourceCompatibility JavaVersion.VERSION_1_8
-    }
     buildToolsVersion '27.0.3'
 }
 
@@ -41,7 +42,6 @@ dependencies {
         exclude module: 'support-v4'
     }
     api rootProject.ext.dependencies["annotations"]
-
     //view
     api(rootProject.ext.dependencies["autolayout"]) {
         exclude group: 'com.android.support'
@@ -49,7 +49,6 @@ dependencies {
     api(rootProject.ext.dependencies["butterknife"]) {
         exclude module: 'support-annotations'
     }
-
     //rx
     api rootProject.ext.dependencies["rxjava2"]
     api(rootProject.ext.dependencies["rxandroid2"]) {
@@ -104,7 +103,6 @@ dependencies {
     annotationProcessor(rootProject.ext.dependencies["glide-compiler"]) {
         exclude module: 'jsr305'
     }
-
     //tools
     compileOnly rootProject.ext.dependencies["javax.annotation"]
     api rootProject.ext.dependencies["dagger2"]
@@ -115,24 +113,15 @@ dependencies {
     api rootProject.ext.dependencies["banner"]
     api rootProject.ext.dependencies["marqueeview"]
     implementation 'com.github.LRH1993:AutoFlowLayout:1.0.5'
-    implementation 'com.roughike:bottom-bar:2.3.1'
+    api 'com.roughike:bottom-bar:2.3.1'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
-    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
-    implementation 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
-    implementation 'com.android.support:design:25.3.1'//版本随意（非必须，引用可以解决无法预览问题）
-
-
-
-
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:design:25.3.1'
     //test
     api rootProject.ext.dependencies["timber"]
     testImplementation rootProject.ext.dependencies["junit"]
-
-//    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-//
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"] //Butterknife 插件,很多人因为没加这个而报错,切记!!!
-    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]//依赖插件, annotationProcessor 是 AndroidStudio 自带并用来替换 APT
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation 'com.android.support:design:27.1.1'
 }

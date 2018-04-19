@@ -1,6 +1,14 @@
 package com.example.ruby.fhapp.app.utils;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.ColorMatrixColorFilter;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+
+import com.blankj.utilcode.util.EncryptUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -9,12 +17,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
-
-import com.blankj.utilcode.util.EncryptUtils;
 
 
-public class CustomUtils {
+
+
+public class Utils {
     //hashMap排序
     public static String hashMapSort(Map map,String sign)
     {
@@ -63,4 +70,42 @@ public class CustomUtils {
         return md5toSignatureRules(map,"&",secret);
     }
 
+    /**
+     * 按钮被按下
+     */
+    public final static float[] BUTTON_PRESSED = new float[] {
+            2.0f, 0, 0, 0, -50,
+            0, 2.0f, 0, 0, -50,
+            0, 0, 2.0f, 0, -50,
+            0, 0, 0, 5, 0 };
+
+    /**
+     * 按钮恢复原状
+     */
+    public final static float[] BUTTON_RELEASED = new float[] {
+            1, 0, 0, 0, 0,
+            0, 1, 0, 0, 0,
+            0, 0, 1, 0, 0,
+            0, 0, 0, 1, 0 };
+
+    public final static boolean checkAcitvty(Intent intent, Context context)
+    {
+        PackageManager packageManager =context.getPackageManager();
+        return packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)==null;
+    }
+
+    private static final View.OnTouchListener touchListener = new View.OnTouchListener() {
+
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                v.getBackground().setColorFilter(new ColorMatrixColorFilter(Utils.BUTTON_PRESSED));
+                v.setBackgroundDrawable(v.getBackground());
+            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                v.getBackground().setColorFilter(new ColorMatrixColorFilter(Utils.BUTTON_RELEASED));
+                v.setBackgroundDrawable(v.getBackground());
+            }
+            return false;
+        }
+    };
 }

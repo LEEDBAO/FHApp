@@ -6,14 +6,35 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/navigation_header_container"
-        layout="@layout/head_layout" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/colorMaster">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="凤凰彩票"
+            android:textAlignment="center"
+            android:textColor="@color/aliceblue"
+            android:textSize="72px" />
+
+        <ImageButton
+            android:id="@+id/image_button_my"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="44px"
+            android:layout_marginTop="19px"
+            android:background="@mipmap/my" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/navigation_header_container">
+        android:layout_height="wrap_content">
 
         <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="match_parent"
@@ -38,65 +59,217 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80px"
+                android:layout_height="wrap_content"
                 android:background="@color/colorMaster">
 
                 <RadioGroup
-                    android:id="@+id/rg_tab_bar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="220px"
                     android:layout_alignParentBottom="true"
                     android:background="@color/white"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/home_withdraw_btn"
                         style="@style/tab_menu_item"
                         android:drawableTop="@mipmap/zhif"
-                        android:text="@string/tab_menu_home"
+                        android:text="提现"
+                        android:textColor="@color/black"
                         android:textSize="32px" />
 
                     <RadioButton
+                        android:id="@+id/home_recharge_btn"
                         style="@style/tab_menu_item"
-                        android:drawableTop="@drawable/tab_menu_put"
-                        android:text="@string/tab_menu_put"
+                        android:drawableTop="@mipmap/chong"
+                        android:text="充值"
+                        android:textColor="@color/black"
                         android:textSize="32px" />
 
                     <RadioButton
+                        android:id="@+id/home_trial_play_btn"
                         style="@style/tab_menu_item"
-                        android:drawableTop="@drawable/tab_menu_find"
-                        android:text="@string/tab_menu_find"
+                        android:drawableTop="@mipmap/shiw"
+                        android:text="免费试玩"
+                        android:textColor="@color/black"
                         android:textSize="32px" />
 
                     <RadioButton
+                        android:id="@+id/home_customer_service_btn"
                         style="@style/tab_menu_item"
-                        android:drawableTop="@drawable/tab_menu_mine"
-                        android:text="@string/tab_menu_mine"
+                        android:drawableTop="@mipmap/kefu"
+                        android:text="在线客服"
+                        android:textColor="@color/black"
                         android:textSize="32px" />
                 </RadioGroup>
 
             </RelativeLayout>
 
             <include
-                android:id="@+id/home_title_my_game"
-                layout="@layout/red_title_na_layout" />
+                android:id="@+id/mine_game"
+                layout="@layout/include_title_na_layout" />
 
             <com.example.library.AutoFlowLayout
                 android:id="@+id/home_my_game"
                 android:layout_width="match_parent"
-                android:layout_height="80px" />
+                android:layout_height="wrap_content" />
 
             <include
-                android:id="@+id/home_title_hot_lottery"
-                layout="@layout/red_title_na_layout" />
+                android:id="@+id/home_hot_lottery_title_rl"
+                layout="@layout/include_title_na_layout" />
 
-            <com.example.library.AutoFlowLayout
-                android:id="@+id/home_hot_lottery"
+            <RelativeLayout
+                android:id="@+id/home_hot_lottery_rl"
                 android:layout_width="match_parent"
-                android:layout_height="80px" />
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_hot_lottery_title_rl" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_1"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="126px"
+                    android:layout_marginRight="80px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_2"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginRight="64px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_3"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80px"
+                    android:layout_marginRight="126px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_4"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="126px"
+                    android:layout_marginRight="80px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_5"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginRight="64px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_6"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80px"
+                    android:layout_marginRight="126px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_7"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="126px"
+                    android:layout_marginRight="80px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_8"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginRight="64px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_9"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80px"
+                    android:layout_marginRight="126px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_10"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="126px"
+                    android:layout_marginRight="80px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_11"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginRight="64px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/home_image_buttn_12"
+                    android:layout_width="180px"
+                    android:layout_height="176px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80px"
+                    android:layout_marginRight="126px"
+                    android:background="@mipmap/beijkl8"
+                    android:clickable="true" />
+            </LinearLayout>
 
             <include
-                android:id="@+id/home_title_other_recommend"
-                layout="@layout/red_title_na_layout" />
+                android:id="@+id/other_ll"
+                layout="@layout/include_title_na_layout" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,28 +278,36 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
 
                 </LinearLayout>
 
-               <view
-                   android:layout_width="1dp"
-                   android:layout_height="match_parent"
-                   android:background="@color/lightgrey"
-                   />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightgrey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                </LinearLayout>
+                    android:orientation="vertical"></LinearLayout>
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="158px"
+                android:background="@color/colorBelowBG"
+                >
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="23px"
+                    android:text="更多帮助请加微信：xxxxx" />
+            </RelativeLayout>
         </com.zhy.autolayout.AutoLinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

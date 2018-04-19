@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/include_normal_nav"
+        />
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120px"-->
+        <!--android:background="@color/colorMaster"-->
+        <!--&gt;-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/reg_image_btn"-->
+            <!--android:layout_width="40px"-->
+            <!--android:layout_height="60px"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="44px"-->
+            <!--android:background="@mipmap/login_03" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/reg_image"-->
+            <!--android:layout_width="4px"-->
+            <!--android:layout_height="60px"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@id/reg_image_btn"-->
+            <!--android:layout_marginLeft="42px"-->
+            <!--android:background="@mipmap/login_06"-->
+             <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@id/reg_image"-->
+            <!--android:layout_marginLeft="42px"-->
+            <!--android:text="@string/register"-->
+            <!--android:textColor="@color/white"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+    <LinearLayout
+        android:id="@+id/username_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="314px"
+        >
+        <ImageView
+            android:id="@+id/image_person"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/user_on" />
+        <EditText
+            android:id="@+id/text_username"
+            android:layout_width="833px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/username"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_ll"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="70px"
+        >
+        <ImageView
+            android:id="@+id/image_passwd"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/pass_on" />
+
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="833px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/repasswd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwd_ll"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="70px"
+        >
+        <ImageView
+            android:id="@+id/image_repasswd"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/reg_03" />
+
+        <EditText
+            android:id="@+id/text_repassword"
+            android:layout_width="833px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="@string/repasswd"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/put_name_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repasswd_ll"
+        android:layout_marginLeft="61px"
+        android:layout_marginTop="70px"
+        >
+        <ImageView
+            android:id="@+id/image_name"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/reg_06" />
+
+        <EditText
+            android:id="@+id/text_name"
+            android:layout_width="833px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/put_name"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reg_button"
+        android:layout_below="@id/put_name_ll"
+        android:layout_width="900px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="214px"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/login"
+        android:textSize="56px"
+        android:textColor="@color/white"
+        android:text="@string/reg_button" />
+</com.zhy.autolayout.AutoRelativeLayout>

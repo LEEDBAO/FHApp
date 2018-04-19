@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <com.zhy.autolayout.AutoRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/colorMaster">
+
+        <ImageButton
+            android:id="@+id/reg_image_btn"
+            android:layout_width="40px"
+            android:layout_height="60px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44px"
+            android:background="@mipmap/login_03" />
+
+        <ImageView
+            android:id="@+id/reg_image"
+            android:layout_width="4px"
+            android:layout_height="60px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42px"
+            android:layout_toRightOf="@id/reg_image_btn"
+            android:background="@mipmap/login_06" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42px"
+            android:layout_toRightOf="@id/reg_image"
+            android:text="@string/register"
+            android:textColor="@color/white" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</merge>

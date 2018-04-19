@@ -14,11 +14,14 @@ import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 
 public class App extends BaseApplication {
+    public static final String SECRET_KEY = "FgutI3slalEF4QVlpsjmgpkQcPzNwS1d";
+    public static final String APPID_DMINE ="root" ;
+
     static {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
             @Override
             public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
-                layout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);
+//                layout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);
                 return new ClassicsHeader(context).setSpinnerStyle(SpinnerStyle.Translate);
             }
         });
